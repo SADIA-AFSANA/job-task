@@ -7,7 +7,7 @@ const Media = () => {
         queryKey: ['medias'],
         queryFn: async () => {
             try {
-                const res = await fetch('http://localhost:5000/medias', {
+                const res = await fetch('https://y-lyart-mu.vercel.app/medias', {
                     headers: {
                         authorization: `bearer ${localStorage.getItem('accessToken')}`
                     }
@@ -24,37 +24,37 @@ const Media = () => {
         return <Loading></Loading>
     }
     return (
-        <div>
+        <div className=''>
             <h1>Media : {medias?.length}</h1>
-            <div className="overflow-x-auto">
-                <table className="table w-full">
+            <div className="overflow-x-auto  ">
+                <table className="table w-full ">
 
                     <thead>
-                        <tr>
+                        <tr className=''>
                             <th></th>
                             <th>text</th>
-                            <th>Job</th>
-                            <th>Favorite Color</th>
+                            <th>Photo</th>
+
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        {/* <tr>
                             <th></th>
                             <th>text</th>
-                            <th>Job</th>
-                            <th>Favorite Color</th>
-                        </tr>
+                            <th>Photo</th>
+
+                        </tr> */}
 
                         {
                             medias.map((media, i) => <tr key={media._id}>
                                 <th>{i + 1}</th>
-                                <td>Cy Ganderton</td>
+                                <td>Hi, I am Sadia</td>
                                 <td><div className="avatar">
                                     <div className="w-24 rounded-full">
                                         <img src={media.image} alt='' />
                                     </div>
                                 </div></td>
-                                <td>Blue</td>
+
                             </tr>)
                         }
 

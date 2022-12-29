@@ -23,7 +23,7 @@ const First = () => {
                         text: data.text,
                         image: imgData.data.url
                     }
-                    fetch('http://localhost:5000/medias', {
+                    fetch('https://y-lyart-mu.vercel.app/medias', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',
@@ -43,7 +43,7 @@ const First = () => {
     const imageHostKey = process.env.REACT_APP_imgbb_key;
 
     return (
-        <div className=' justify-center items-center '>
+        <div className=' justify-center items-center bg-gray-200 pl-20 pb-5'>
 
             <form onSubmit={handleSubmit(handleFirst)} >
 

@@ -3,7 +3,7 @@ import Modal from '../Modal/Modal';
 
 const About = () => {
     return (
-        <div>
+        <div className='bg-gray-400 pl-10 my-5'>
             <Modal></Modal>
             <div className='text-end'>
 
